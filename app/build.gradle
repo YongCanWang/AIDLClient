@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.mapscloud.aidlclient"
         minSdk 28
-        targetSdk 28
+        targetSdk 28 // targetSdk大于28 无法启动跨线程服务，暂时未确认原因
         versionCode 1
         versionName "1.0"
 
