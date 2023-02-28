@@ -69,4 +69,13 @@ class MainActivity : AppCompatActivity() {
         intent.component = componentName
         startActivity(intent)
     }
+
+    fun onSend(view: View) {
+        val intent = Intent()
+        intent.action =
+            "com.mapscloud.br.servicebroadcastreceiver.action" // AndroidManifest intent-filter
+        intent.`package` = "com.mapscloud.aidlservice"  // applicationId
+        intent.putExtra("arclient", "我来自ARClient")
+        sendBroadcast(intent)
+    }
 }
