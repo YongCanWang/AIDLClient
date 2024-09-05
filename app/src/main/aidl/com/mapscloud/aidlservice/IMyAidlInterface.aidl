@@ -1,6 +1,9 @@
 // IMyAidlInterface.aidl
 package com.mapscloud.aidlservice;
 
+import com.mapscloud.call.CallbackInterface;
+import android.os.IBinder;
+
 // Declare any non-default types here with import statements
 
 interface IMyAidlInterface {
@@ -11,6 +14,9 @@ interface IMyAidlInterface {
     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
             double aDouble, String aString);
 
-            String getStr(int code);
+    String add(int number1, int number2);
 
+    void setListener(int number1, int number2, CallbackInterface callbackInterface);
+
+    void setCallbackListener(int number1, int number2, IBinder callbackInterface);
 }
